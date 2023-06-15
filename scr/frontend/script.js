@@ -10,9 +10,9 @@ async function loadMessages() {
 
     response.forEach((item) => {
       const div = document.createElement('div');
-      div.classList.add('conteudoMensagem');
+      div.classList.add('section__content');
       div.innerHTML = `
-        <label class="conteudo">mensagem:</label> ${item.texto} <br>
+        <label class="content__lable">mensagem:</label> ${item.texto} <br>
       `;
       section.appendChild(div);
     });
@@ -26,7 +26,7 @@ loadMessages()
 
 async function createinsere() {
   await $.ajax({
-    url: `http://localhost:3001/insereMensagem`,
+    url: `http://localhost:3001/inseremensagem`,
     method: "POST",
     data: {
       texto: document.getElementById('texto').value
@@ -39,9 +39,9 @@ async function createinsere() {
 
     response.forEach((item) => {
       const div = document.createElement('div');
-      div.classList.add('conteudoMensagem');
+      div.classList.add('section__content');
       div.innerHTML = `
-        <label class="conteudo">mensagem:</label> ${item.texto} <br>
+        <label class="content__lable">mensagem:</label> ${item.texto} <br>
       `;
       section.appendChild(div);
     });

@@ -25,7 +25,7 @@ app.get('/mensagem', (req, res) => {
 		});
 		db.close(); // Fecha o banco
 });
-app.post('/insereMensagem', (req, res) =>	 {
+app.post('/inseremensagem', (req, res) =>	 {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
